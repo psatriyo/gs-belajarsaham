@@ -37,6 +37,12 @@ var I18N_DICT = {
   "nav.sid": { id: "SID", en: "SID" },
   "nav.investor": { id: "Investor", en: "Investor" },
   "nav.trader": { id: "Trader", en: "Trader" },
+  "nav.catDasar": { id: "Dasar Saham", en: "Stock Basics" },
+  "nav.catEkosistem": { id: "Ekosistem", en: "Ecosystem" },
+  "nav.catInfrastruktur": { id: "Infrastruktur", en: "Infrastructure" },
+  "nav.catKeuntungan": { id: "Keuntungan", en: "Returns" },
+  "nav.catAnalisa": { id: "Analisa", en: "Analysis" },
+  "nav.catReferensi": { id: "Referensi", en: "Reference" },
 
   // ── Page Header Subtitle ──
   "pageheader.sub": { id: "Belajar Saham Pemula", en: "Stock Investing for Beginners" },
