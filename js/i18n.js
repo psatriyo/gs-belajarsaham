@@ -225,7 +225,7 @@ var I18N_DICT = {
   "emiten.p4": { id: 'Simak ciri–ciri <a href="kode-saham.html">kode saham</a> disini.', en: 'Learn about the characteristics of <a href="kode-saham.html">stock codes</a> here.' },
 
   // ── KODE-SAHAM.HTML ──
-  "kodeSaham.h1": { id: "🏷️ Kode Saham", en: "🏷️ Stock Codes" },
+  "kodeSaham.h1": { id: '<span aria-hidden="true">🏷️ </span>Kode Saham', en: '<span aria-hidden="true">🏷️ </span>Stock Codes' },
   "kodeSaham.p1": { id: 'Setiap <a href="emiten.html">emiten</a> di <a href="bursa-efek.html">bursa efek</a> Indonesia memiliki kode khusus. Kode saham ini memiliki ciri–ciri antara lain:', en: 'Every <a href="emiten.html">issuer</a> on the Indonesian <a href="bursa-efek.html">stock exchange</a> has a special code. Stock codes have these characteristics:' },
   "kodeSaham.li1": { id: "Setiap kode memiliki <strong>4 huruf kapital</strong>.", en: "Each code has <strong>4 capital letters</strong>." },
   "kodeSaham.highlightH3": { id: "🎯 Tujuan Pengkodean Saham", en: "🎯 Purpose of Stock Coding" },
@@ -265,7 +265,7 @@ var I18N_DICT = {
   "efek.p2": { id: 'Perusahaan yang menerbitkan salah satu dari surat berharga di atas disebut sebagai <a href="emiten.html">emiten</a>.', en: 'A company that issues any of the securities above is called an <a href="emiten.html">issuer</a>.' },
 
   // ── BURSA-EFEK.HTML ──
-  "bursa.h1": { id: '🏛️ Bursa Efek Indonesia', en: '🏛️ Indonesia Stock Exchange' },
+  "bursa.h1": { id: '<span aria-hidden="true">🏛️ </span>Bursa Efek Indonesia', en: '<span aria-hidden="true">🏛️ </span>Indonesia Stock Exchange' },
   "bursa.p1": { id: 'Bursa efek adalah seperti pasar tradisional. Ada banyak brand penjual dan beragam pembeli di dalamnya. Jadi, bursa efek adalah pihak yang menyelenggarakan dan menyediakan sistem dan atau sarana untuk mempertemukan penawaran jual dan beli <a href="efek.html">efek</a> pihak–pihak lain dengan tujuan memperdagangkan efek diantara mereka.', en: 'A stock exchange is like a traditional market. There are many seller brands and various buyers in it. So, a stock exchange is the party that organizes and provides systems and/or facilities to bring together buy and sell offers for <a href="efek.html">securities</a> from various parties with the purpose of trading securities among them.' },
   "bursa.p2": { id: 'Setiap perusahaan yang sudah melakukan proses <a href="ipo.html">initial public offering</a> (IPO) maka secara resmi sudah membuka diri untuk publik. Istilahnya: <a href="go-public.html">Go Public</a>.', en: 'Every company that has completed the <a href="ipo.html">initial public offering</a> (IPO) process has officially opened itself to the public. The term is: <a href="go-public.html">Go Public</a>.' },
   "bursa.p3": { id: 'Dengan Go Public, semua hal berkaitan dengan perusahaan tersebut bisa diakses oleh semua orang, termasuk laporan keuangan, jadwal <a href="rups.html">RUPS</a>, keputusan RUPS, paparan publik atas rencana bisnis perusahaan, hingga harga saham-nya. Dengan Go Public, semua orang bisa membeli maupun menjual <a href="saham.html">saham</a> perusahaan yang tercatat (<a href="emiten.html">emiten</a>) dimana wadahnya ada di bursa efek Indonesia.', en: 'By Going Public, everything related to the company can be accessed by everyone, including financial reports, <a href="rups.html">GMS</a> schedules, GMS decisions, public disclosures of business plans, and stock prices. By Going Public, anyone can buy or sell <a href="saham.html">shares</a> of listed companies (<a href="emiten.html">issuers</a>) where the marketplace is the Indonesian stock exchange.' },
@@ -289,7 +289,7 @@ var I18N_DICT = {
   "goPublic.p3": { id: 'Yuk Simak penjelasan lebih mendalam di halaman <a href="ipo.html">IPO</a> ya.', en: 'Let\'s read a more detailed explanation on the <a href="ipo.html">IPO</a> page.' },
 
   // ── RUPS.HTML ──
-  "rups.h1": { id: "🏛️ RUPS", en: "🏛️ General Meeting of Shareholders (GMS)" },
+  "rups.h1": { id: '<span aria-hidden="true">🏛️ </span>RUPS', en: '<span aria-hidden="true">🏛️ </span>General Meeting of Shareholders (GMS)' },
   "rups.p1": { id: 'Rapat Umum Pemegang <a href="saham.html">Saham</a>, organ Perseroan Terbatas yang memiliki kewenangan ekslusif yang tidak diberikan kepada Direksi dan Dewan Komisaris. Kewenangan RUPS, bentuk dan luasannya, ditentukan dalam Undang-Undang Perseroan Terbatas dan Anggaran Dasar Perseroan.', en: 'The General Meeting of <a href="saham.html">Shareholders</a> (GMS), an organ of a Limited Liability Company that has exclusive authority not granted to the Board of Directors and Board of Commissioners. The authority of the GMS, its form and scope, is determined in the Limited Liability Company Law and the Company\'s Articles of Association.' },
 
   // ── BROKER-SAHAM.HTML ──
@@ -561,6 +561,60 @@ var I18N_DICT = {
     // index.html continued sections
     "index.sectionLabelRekening": { id: "Rekening", en: "Accounts" },
     "index.rekening3H2": { id: "3 Rekening dalam 1 Akun", en: "3 Accounts in 1" },
+  };
+  for (var key in extra) {
+    if (extra.hasOwnProperty(key)) {
+      I18N_DICT[key] = extra[key];
+    }
+  }
+})();
+
+// ── Missing section labels ──
+(function() {
+  var extra = {
+    "index.sectionLabelEkosistem": { id: "Ekosistem", en: "Ecosystem" },
+    "index.sectionLabelRekening": { id: "Rekening", en: "Accounts" },
+    "index.sectionLabelMekanisme": { id: "Mekanisme", en: "Mechanics" },
+    "index.sectionLabelKeamanan": { id: "Keamanan", en: "Security" },
+    "index.sectionLabelBiaya": { id: "Biaya", en: "Costs" },
+  };
+  for (var key in extra) {
+    if (extra.hasOwnProperty(key)) {
+      I18N_DICT[key] = extra[key];
+    }
+  }
+})();
+
+// ── Card arrows ──
+(function() {
+  var extra = {
+    "index.card2arrow": { id: "Pelajari →", en: "Learn More →" },
+    "index.card3arrow": { id: "Pelajari →", en: "Learn More →" },
+    "index.card4arrow": { id: "Pelajari →", en: "Learn More →" },
+    "index.card5arrow": { id: "Pelajari →", en: "Learn More →" },
+    "index.card6arrow": { id: "Pelajari →", en: "Learn More →" },
+    "index.infraBursaArrow": { id: "Pelajari →", en: "Learn More →" },
+    "index.infraIPOArrow": { id: "Pelajari →", en: "Learn More →" },
+    "index.infraBrokerArrow": { id: "Pelajari →", en: "Learn More →" },
+    "index.infraRekeningArrow": { id: "Pelajari →", en: "Learn More →" },
+    "index.rekEfekDetail": { id: "Detail →", en: "Details →" },
+    "index.subRekEfekDetail": { id: "Detail →", en: "Details →" },
+    "index.rdnDetail": { id: "Detail →", en: "Details →" },
+  };
+  for (var key in extra) {
+    if (extra.hasOwnProperty(key)) {
+      I18N_DICT[key] = extra[key];
+    }
+  }
+})();
+
+// ── Infrastructure card headings ──
+(function() {
+  var extra = {
+    "index.infraBursaH4": { id: "Bursa Efek Indonesia", en: "Indonesia Stock Exchange" },
+    "index.infraIPOH4": { id: "Initial Public Offering", en: "Initial Public Offering" },
+    "index.infraBrokerH4": { id: "Broker Saham", en: "Stock Broker" },
+    "index.infraRekeningH4": { id: "Rekening Saham", en: "Stock Account" },
   };
   for (var key in extra) {
     if (extra.hasOwnProperty(key)) {
