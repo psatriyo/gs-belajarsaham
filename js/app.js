@@ -5,13 +5,16 @@
 (function () {
   'use strict';
 
+  // ── P2-D18: Check reduced motion preference ──
+  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   // ── Mobile hamburger nav toggle ──
-  const nav = document.querySelector('.site-nav');
+  var nav = document.querySelector('.site-nav');
   if (nav) {
-    const inner = nav.querySelector('.nav-inner');
+    var inner = nav.querySelector('.nav-inner');
     if (inner) {
       // Create toggle button
-      const toggle = document.createElement('button');
+      var toggle = document.createElement('button');
       toggle.className = 'nav-toggle';
       toggle.setAttribute('aria-label', 'Buka menu navigasi');
       toggle.setAttribute('aria-expanded', 'false');
@@ -19,7 +22,7 @@
       nav.insertBefore(toggle, nav.firstChild);
 
       toggle.addEventListener('click', function () {
-        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        var expanded = toggle.getAttribute('aria-expanded') === 'true';
         toggle.setAttribute('aria-expanded', String(!expanded));
         nav.classList.toggle('nav-open');
         toggle.classList.toggle('nav-open');
@@ -36,23 +39,28 @@
     }
   }
 
-  // ── Smooth scroll for back-to-top links ──
-  document.querySelectorAll('a[href="#top"], a.back-top[href="#"]').forEach(function (link) {
+  // ── Smooth scroll for back-to-top links (P1-D10: fixed from href="#" to href="#top") ──
+  document.querySelectorAll('a[href="#top"], a.back-top').forEach(function (link) {
     link.addEventListener('click', function (e) {
       e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      var behavior = prefersReducedMotion ? 'auto' : 'smooth';
+      window.scrollTo({ top: 0, behavior: behavior });
     });
   });
 
   // ── Smooth scroll for anchor links ──
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
-    const href = link.getAttribute('href');
+    var href = link.getAttribute('href');
     if (href.length > 1) {
       link.addEventListener('click', function (e) {
-        const target = document.querySelector(href);
+        var target = document.querySelector(href);
         if (target) {
           e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth' });
+          if (prefersReducedMotion) {
+            target.scrollIntoView({ behavior: 'auto' });
+          } else {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
         }
       });
     }
@@ -60,11 +68,11 @@
 
   // ── Nav scroll fade indicator ──
   if (nav) {
-    const scrollContainer = nav.querySelector('.nav-scroll-container');
+    var scrollContainer = nav.querySelector('.nav-scroll-container');
     if (scrollContainer) {
       function checkNavScroll() {
-        const el = scrollContainer;
-        const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 4;
+        var el = scrollContainer;
+        var atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 4;
         nav.classList.toggle('scrolled-end', atEnd);
       }
       scrollContainer.addEventListener('scroll', checkNavScroll, { passive: true });
@@ -135,14 +143,15 @@
   applyLang(currentLang);
 
   // ── Animate cards on scroll (Intersection Observer) ──
-  if ('IntersectionObserver' in window) {
-    const animatedEls = document.querySelectorAll('.card, .step, .stat, .pilar-card, .split-card, .example-card, .flow-step, .trust-card');
+  // P2-D18: Skip animations if user prefers reduced motion
+  if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+    var animatedEls = document.querySelectorAll('.card, .step, .stat, .pilar-card, .split-card, .example-card, .flow-step, .trust-card, .path-item');
     animatedEls.forEach(function (el) {
       el.style.opacity = '0';
       el.style.transform = 'translateY(20px)';
     });
 
-    const observer = new IntersectionObserver(function (entries) {
+    var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.style.opacity = '';

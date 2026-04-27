@@ -88,18 +88,22 @@
         <a href="lot-saham.html" data-i18n="nav.lotSaham">Lot Saham</a>
         <a href="saham-blue-chip.html" data-i18n="nav.blueChip">Blue Chip</a>
         <a href="sektor-industri.html" data-i18n="nav.sektorIndustri">Sektor Industri</a>
+        <span class="nav-category-label" data-i18n="nav.catEkosistem">Ekosistem</span>
         <a href="efek.html" data-i18n="nav.efek">Efek</a>
         <a href="bursa-efek.html" data-i18n="nav.bursaEfek">Bursa Efek</a>
         <a href="ipo.html" data-i18n="nav.ipo">IPO</a>
         <a href="go-public.html" data-i18n="nav.goPublic">Go Public</a>
         <a href="rups.html" data-i18n="nav.rups">RUPS</a>
+        <span class="nav-category-label" data-i18n="nav.catInfrastruktur">Infrastruktur</span>
         <a href="broker-saham.html" data-i18n="nav.brokerSaham">Broker Saham</a>
         <a href="rekening-saham.html" data-i18n="nav.rekeningSaham">Rekening Saham</a>
         <a href="buka-rekening.html" data-i18n="nav.bukaRekening">Buka Rekening</a>
         <a href="sid.html" data-i18n="nav.sid">SID</a>
+        <span class="nav-category-label" data-i18n="nav.catKeuntungan">Keuntungan</span>
         <a href="capital-gain.html" data-i18n="nav.capitalGain">Capital Gain</a>
         <a href="deviden.html" data-i18n="nav.deviden">Deviden</a>
         <a href="analisa-fundamental.html" data-i18n="nav.analisaFundamental">Analisa Fundamental</a>
+        <span class="nav-category-label" data-i18n="nav.catLainnya">Lainnya</span>
         <a href="investor.html" data-i18n="nav.investor">Investor</a>
         <a href="trader.html" data-i18n="nav.trader">Trader</a>
         <a href="kamus-saham.html" data-i18n="nav.kamusSaham">Kamus Saham</a>
@@ -118,7 +122,6 @@
       <circle cx="380" cy="60" r="5" fill="var(--accent)" opacity="0" style="animation: heroDot .3s 2.3s ease-out forwards;"/>
       <line x1="380" y1="60" x2="380" y2="280" stroke="rgba(255,255,255,.1)" stroke-width="1" stroke-dasharray="4 4"/>
       <line x1="20" y1="280" x2="380" y2="280" stroke="rgba(255,255,255,.1)" stroke-width="1" stroke-dasharray="4 4"/>
-      <style>@keyframes heroLine { to { stroke-dashoffset: 0; } } @keyframes heroDot { to { opacity: 1; } }</style>
     </svg>
     <div class="container hero-content">
       <div class="hero-content-grid">
@@ -143,13 +146,21 @@
         </div>
       </div>
     </div>
+    <!-- P0-D1: Decorative chart bg for mobile -->
+    <div class="hero-chart-mobile-bg" aria-hidden="true">
+      <div class="hero-bar"></div>
+      <div class="hero-bar"></div>
+      <div class="hero-bar"></div>
+      <div class="hero-bar"></div>
+      <div class="hero-bar"></div>
+      <div class="hero-bar"></div>
+      <div class="hero-bar"></div>
+      <div class="hero-bar"></div>
+    </div>
   </header>
 
   <!-- Why Learn -->
-  <section class="section section-compact" id="mulai">
-    <div class="container">
-      <div class="section-label" data-i18n="index.sectionLabel1">Fundamental</div>
-      <h2 data-i18n="index.whyH2">Kenapa Harus Belajar Dulu?</h2>
+  <section class="section section-white section-compact" id="mulai">
       <p class="lead" data-i18n="index.whyLead">Jangan pernah mulai transaksi saham tanpa belajar — apalagi sekadar ikut-ikutan orang. Belajar saham bukan cuma tahu cara beli-jual, tapi memahami seluruh ekosistem pasar modal.</p>
       <div class="checklist">
         <div class="check-item">
@@ -194,7 +205,8 @@
           <div class="number">1.700%</div>
           <div class="label" data-i18n-html="index.stat3Label">dari MAPI (2003–2024)<br>passive income 16%/tahun</div>
         </div>
-        <div class="stat">
+        <div class="stat stat-featured">
+          <div class="stat-badge" data-i18n="index.stat4Badge">🏆 Terbaik</div>
           <div class="stat-context">CAGR</div>
           <div class="number">67.2%</div>
           <div class="label" data-i18n-html="index.stat4Label">per tahun dari BBRI (2003–2024)<br>modal tumbuh 18x lipat</div>
@@ -205,7 +217,7 @@
   </section>
 
   <!-- Kenalan Dulu Yuk -->
-  <section class="section section-spacious">
+  <section class="section section-cool section-spacious">
     <div class="container">
       <div class="section-label" data-i18n="index.sectionLabel3">Istilah Dasar</div>
       <h2 data-i18n="index.kenalanH2">Kenalan Dulu Yuk</h2>
@@ -364,9 +376,41 @@
             </a>
           </div>
         </div>
+        <div class="path-connector" aria-hidden="true"><div class="path-connector-arrow"></div></div>
+        <div class="path-group">
+          <div class="path-group-label" data-i18n="index.pathGroupReferensi">Referensi</div>
+          <div class="path-items">
+            <a href="investor.html" class="path-item">
+              <span class="path-num">18</span>
+              <span class="path-text" data-i18n="index.pathInvestor">Investor</span>
+            </a>
+            <a href="trader.html" class="path-item">
+              <span class="path-num">19</span>
+              <span class="path-text" data-i18n="index.pathTrader">Trader</span>
+            </a>
+            <a href="rekening-efek.html" class="path-item">
+              <span class="path-num">20</span>
+              <span class="path-text" data-i18n="index.pathRekeningEfek">Rekening Efek</span>
+            </a>
+            <a href="sub-rekening-efek.html" class="path-item">
+              <span class="path-num">21</span>
+              <span class="path-text" data-i18n="index.pathSubRekeningEfek">Sub Rekening Efek</span>
+            </a>
+            <a href="rekening-dana-nasabah.html" class="path-item">
+              <span class="path-num">22</span>
+              <span class="path-text" data-i18n="index.pathRDN">RDN</span>
+            </a>
+            <a href="sid.html" class="path-item">
+              <span class="path-num">23</span>
+              <span class="path-text" data-i18n="index.pathSID">SID</span>
+            </a>
+            <a href="kamus-saham.html" class="path-item">
+              <span class="path-num">24</span>
+              <span class="path-text" data-i18n="index.pathKamus">Kamus Saham</span>
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
   <!-- Kok Saham Diperjualbelikan -->
   <section class="section section-alt section-compact">
     <div class="container">
@@ -383,7 +427,7 @@
   </section>
 
   <!-- Infrastruktur -->
-  <section class="section section-compact">
+  <section class="section section-warm section-compact">
     <div class="container">
       <div class="section-label" data-i18n="index.sectionLabel6">Infrastruktur</div>
       <h2 data-i18n="index.infraH2">Mereka yang Bikin Bisa</h2>
@@ -448,7 +492,7 @@
   </section>
 
   <!-- 2 Sumber Keuntungan -->
-  <section class="section section-compact">
+  <section class="section section-white section-compact">
     <div class="container">
       <div class="section-label" data-i18n="index.sectionLabelReturns">Return</div>
       <h2 data-i18n="index.returnsH2">2 Sumber Keuntungan Saham</h2>
@@ -517,7 +561,7 @@
   </section>
 
   <!-- Rekening Saham -->
-  <section class="section section-compact">
+  <section class="section section-cool section-compact">
     <div class="container">
       <div class="section-label" data-i18n="index.sectionLabelRekening">Rekening</div>
       <h2>3 Rekening dalam 1 Akun</h2>
@@ -587,7 +631,7 @@
   </section>
 
   <!-- Keamanan -->
-  <section class="section section-spacious">
+  <section class="section section-white section-spacious">
     <div class="container">
       <div class="section-label" data-i18n="index.sectionLabelKeamanan">Keamanan</div>
       <h2>Aman Ga Sih?</h2>
@@ -740,7 +784,7 @@
         </details>
       </div>
       <div class="footer-bottom">
-        <p>📞 0858 9000 6618 · 📧 administrator@galerisaham.com</p>
+        <p data-i18n-html="footer.adapted">Konten diadaptasi dari <a href="https://galerisaham.com/" target="_blank">GaleriSaham.com</a></p>
       </div>
     </div>
   </footer>

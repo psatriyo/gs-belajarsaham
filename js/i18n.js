@@ -37,6 +37,11 @@ var I18N_DICT = {
   "nav.sid": { id: "SID", en: "SID" },
   "nav.investor": { id: "Investor", en: "Investor" },
   "nav.trader": { id: "Trader", en: "Trader" },
+  "nav.catDasarSaham": { id: "Dasar Saham", en: "Stock Basics" },
+  "nav.catEkosistem": { id: "Ekosistem", en: "Ecosystem" },
+  "nav.catInfrastruktur": { id: "Infrastruktur", en: "Infrastructure" },
+  "nav.catKeuntungan": { id: "Keuntungan", en: "Returns" },
+  "nav.catLainnya": { id: "Lainnya", en: "More" },
 
   // ── Page Header Subtitle ──
   "pageheader.sub": { id: "Belajar Saham Pemula", en: "Stock Investing for Beginners" },
@@ -165,6 +170,15 @@ var I18N_DICT = {
   "index.pathCapitalGain": { id: "Capital Gain", en: "Capital Gain" },
   "index.pathDeviden": { id: "Deviden", en: "Dividend" },
   "index.pathFundamental": { id: "Analisa Fundamental", en: "Fundamental Analysis" },
+  "index.pathGroupReferensi": { id: "Referensi", en: "Reference" },
+  "index.pathInvestor": { id: "Investor", en: "Investor" },
+  "index.pathTrader": { id: "Trader", en: "Trader" },
+  "index.pathRekeningEfek": { id: "Rekening Efek", en: "Securities Account" },
+  "index.pathSubRekeningEfek": { id: "Sub Rekening Efek", en: "Sub Securities Account" },
+  "index.pathRDN": { id: "RDN", en: "RDN" },
+  "index.pathSID": { id: "SID", en: "SID" },
+  "index.pathKamus": { id: "Kamus Saham", en: "Stock Glossary" },
+  "index.stat4Badge": { id: "🏆 Terbaik", en: "🏆 Best" },
 
   // ── INDEX.HTML — Why Stocks Are Traded ──
   "index.sectionLabel5": { id: "Ekosistem", en: "Ecosystem" },
