@@ -31,6 +31,12 @@ var I18N_DICT = {
   "nav.deviden": { id: "Deviden", en: "Dividend" },
   "nav.analisaFundamental": { id: "Analisa Fundamental", en: "Fundamental Analysis" },
   "nav.kamusSaham": { id: "Kamus Saham", en: "Stock Glossary" },
+  "nav.efek": { id: "Efek", en: "Securities" },
+  "nav.goPublic": { id: "Go Public", en: "Go Public" },
+  "nav.rups": { id: "RUPS", en: "GMS" },
+  "nav.sid": { id: "SID", en: "SID" },
+  "nav.investor": { id: "Investor", en: "Investor" },
+  "nav.trader": { id: "Trader", en: "Trader" },
 
   // ── Page Header Subtitle ──
   "pageheader.sub": { id: "Belajar Saham Pemula", en: "Stock Investing for Beginners" },

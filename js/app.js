@@ -21,7 +21,7 @@
       toggle.addEventListener('click', function () {
         const expanded = toggle.getAttribute('aria-expanded') === 'true';
         toggle.setAttribute('aria-expanded', String(!expanded));
-        inner.classList.toggle('nav-open');
+        nav.classList.toggle('nav-open');
         toggle.classList.toggle('nav-open');
       });
 
@@ -29,7 +29,7 @@
       inner.addEventListener('click', function (e) {
         if (e.target.tagName === 'A') {
           toggle.setAttribute('aria-expanded', 'false');
-          inner.classList.remove('nav-open');
+          nav.classList.remove('nav-open');
           toggle.classList.remove('nav-open');
         }
       });
@@ -57,6 +57,22 @@
       });
     }
   });
+
+  // ── Nav scroll fade indicator ──
+  if (nav) {
+    const scrollContainer = nav.querySelector('.nav-scroll-container');
+    if (scrollContainer) {
+      function checkNavScroll() {
+        const el = scrollContainer;
+        const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 4;
+        nav.classList.toggle('scrolled-end', atEnd);
+      }
+      scrollContainer.addEventListener('scroll', checkNavScroll, { passive: true });
+      // Check on load and resize
+      checkNavScroll();
+      window.addEventListener('resize', checkNavScroll);
+    }
+  }
 
   // ── i18n / Language Switcher ──
   var currentLang = (function () {
