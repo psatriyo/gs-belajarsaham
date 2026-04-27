@@ -60,21 +60,44 @@
 <main id="main-content">
 
   <!-- Hero -->
-  <header class="hero">
+  <header class="hero section-spacious">
     <div class="hero-bg"></div>
+    <svg class="hero-illustration" viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M20 280 L60 240 L100 260 L140 200 L180 180 L220 140 L260 160 L300 100 L340 80 L380 60" stroke="rgba(255,255,255,.25)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M20 280 L60 240 L100 260 L140 200 L180 180 L220 140 L260 160 L300 100 L340 80 L380 60" stroke="url(#heroGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-dasharray="400" stroke-dashoffset="400" style="animation: heroLine 2s .5s ease-out forwards;"/>
+      <defs><linearGradient id="heroGrad" x1="0" y1="0" x2="400" y2="0"><stop offset="0%" stop-color="var(--accent-light)"/><stop offset="100%" stop-color="var(--accent)"/></linearGradient></defs>
+      <circle cx="380" cy="60" r="5" fill="var(--accent)" opacity="0" style="animation: heroDot .3s 2.3s ease-out forwards;"/>
+      <line x1="380" y1="60" x2="380" y2="280" stroke="rgba(255,255,255,.1)" stroke-width="1" stroke-dasharray="4 4"/>
+      <line x1="20" y1="280" x2="380" y2="280" stroke="rgba(255,255,255,.1)" stroke-width="1" stroke-dasharray="4 4"/>
+      <style>@keyframes heroLine { to { stroke-dashoffset: 0; } } @keyframes heroDot { to { opacity: 1; } }</style>
+    </svg>
     <div class="container hero-content">
-      <div class="hero-badge" data-i18n="hero.badge">✦ Panduan Pemula — Gratis & Lengkap</div>
-      <h1 data-i18n-html="hero.h1">Belajar Saham<br>dari Nol</h1>
-      <p class="hero-sub" data-i18n-html="hero.sub">Investasi saham bisa memajukan kesejahteraan, perekonomian, dan keadilan — <strong>kalau dipahami & dijalani dengan benar.</strong></p>
-      <div class="hero-cta">
-        <a href="#mulai" class="btn btn-primary" data-i18n="hero.ctaPrimary">Mulai Belajar ↓</a>
-        <a href="kamus-saham.html" class="btn btn-outline" data-i18n="hero.ctaSecondary">Kamus Istilah</a>
+      <div class="hero-content-grid">
+        <div class="hero-text">
+          <div class="hero-badge" data-i18n="hero.badge">✦ Panduan Pemula — Gratis & Lengkap</div>
+          <h1 data-i18n-html="hero.h1">Belajar Saham<br>dari Nol</h1>
+          <p class="hero-sub" data-i18n-html="hero.sub">Investasi saham bisa memajukan kesejahteraan, perekonomian, dan keadilan — <strong>kalau dipahami & dijalani dengan benar.</strong></p>
+          <div class="hero-cta">
+            <a href="#mulai" class="btn btn-primary" data-i18n="hero.ctaPrimary">Mulai Belajar ↓</a>
+            <a href="kamus-saham.html" class="btn btn-outline" data-i18n="hero.ctaSecondary">Kamus Istilah</a>
+          </div>
+        </div>
+        <div class="hero-chart" aria-hidden="true">
+          <div class="hero-bar"></div>
+          <div class="hero-bar"></div>
+          <div class="hero-bar"></div>
+          <div class="hero-bar"></div>
+          <div class="hero-bar"></div>
+          <div class="hero-bar"></div>
+          <div class="hero-bar"></div>
+          <div class="hero-bar"></div>
+        </div>
       </div>
     </div>
   </header>
 
   <!-- Why Learn -->
-  <section class="section" id="mulai">
+  <section class="section section-compact" id="mulai">
     <div class="container">
       <div class="section-label" data-i18n="index.sectionLabel1">Fundamental</div>
       <h2 data-i18n="index.whyH2">Kenapa Harus Belajar Dulu?</h2>
@@ -101,35 +124,39 @@
   </section>
 
   <!-- Success Stories -->
-  <section class="section section-dark">
+  <section class="section section-dark section-spacious">
     <div class="container">
       <div class="section-label section-label-light" data-i18n="index.sectionLabel2">Bukti Nyata</div>
       <h2 class="text-light" data-i18n="index.successH2">Mereka Sukses dengan Saham</h2>
       <p class="text-light-muted" data-i18n="index.successLead">Orang yang mengerti apa yang mereka beli, kapan beli, dan bagaimana menyimpannya — inilah buktinya.</p>
       <div class="stats">
         <div class="stat">
+          <div class="stat-context">Total Return</div>
           <div class="number">1.360%</div>
           <div class="label" data-i18n-html="index.stat1Label">dari BBCA (2000–2024)<br>passive income 13.6%/tahun</div>
         </div>
         <div class="stat">
+          <div class="stat-context">Total Return</div>
           <div class="number">650%</div>
           <div class="label" data-i18n-html="index.stat2Label">UNVR saat krisis (1997–2018)<br>passive income 18.9%/tahun</div>
         </div>
         <div class="stat">
+          <div class="stat-context">Total Return</div>
           <div class="number">1.700%</div>
           <div class="label" data-i18n-html="index.stat3Label">dari MAPI (2003–2024)<br>passive income 16%/tahun</div>
         </div>
         <div class="stat">
+          <div class="stat-context">CAGR</div>
           <div class="number">67.2%</div>
           <div class="label" data-i18n-html="index.stat4Label">per tahun dari BBRI (2003–2024)<br>modal tumbuh 18x lipat</div>
         </div>
       </div>
-      <p class="text-light-muted" style="margin-top:24px; font-size:.95rem;" data-i18n-html="index.successFootnote">Investasi saham menjanjikan selama perusahaan yang kamu beli terus tumbuh — dan kamu terus menyimpannya. Kamu mendapat kenaikan aset <em>dan</em> passive income sekaligus.</p>
+      <div class="stat-disclaimer" data-i18n-html="index.successFootnote">Investasi saham menjanjikan selama perusahaan yang kamu beli terus tumbuh — dan kamu terus menyimpannya. Kamu mendapat kenaikan aset <em>dan</em> passive income sekaligus.</div>
     </div>
   </section>
 
   <!-- Kenalan Dulu Yuk -->
-  <section class="section">
+  <section class="section section-spacious">
     <div class="container">
       <div class="section-label" data-i18n="index.sectionLabel3">Istilah Dasar</div>
       <h2 data-i18n="index.kenalanH2">Kenalan Dulu Yuk</h2>
@@ -190,7 +217,7 @@
 
 
   <!-- Learning Path -->
-  <section class="section section-alt">
+  <section class="section section-alt section-spacious">
     <div class="container">
       <div class="section-label" data-i18n="index.sectionLabel4">Perjalanan Belajar</div>
       <h2 data-i18n="index.pathH2">Langkah demi Langkah</h2>
@@ -225,6 +252,7 @@
             </a>
           </div>
         </div>
+        <div class="path-connector" aria-hidden="true"><div class="path-connector-arrow"></div></div>
         <div class="path-group">
           <div class="path-group-label" data-i18n="index.pathGroupEkosistem">Ekosistem</div>
           <div class="path-items">
@@ -250,6 +278,7 @@
             </a>
           </div>
         </div>
+        <div class="path-connector" aria-hidden="true"><div class="path-connector-arrow"></div></div>
         <div class="path-group">
           <div class="path-group-label" data-i18n="index.pathGroupInfra">Infrastruktur</div>
           <div class="path-items">
@@ -268,6 +297,7 @@
             </a>
           </div>
         </div>
+        <div class="path-connector" aria-hidden="true"><div class="path-connector-arrow"></div></div>
         <div class="path-group">
           <div class="path-group-label" data-i18n-html="index.pathGroupKeuntungan">Keuntungan &amp; Analisa</div>
           <div class="path-items">
@@ -289,7 +319,7 @@
     </div>
   </section>
   <!-- Kok Saham Diperjualbelikan -->
-  <section class="section section-alt">
+  <section class="section section-alt section-compact">
     <div class="container">
       <div class="section-label" data-i18n="index.sectionLabelEkosistem">Ekosistem</div>
       <h2 data-i18n="index.whyTradedH2">Mengapa Saham Bisa Diperjualbelikan?</h2>
@@ -304,7 +334,7 @@
   </section>
 
   <!-- Infrastruktur -->
-  <section class="section">
+  <section class="section section-compact">
     <div class="container">
       <div class="section-label" data-i18n="index.sectionLabel6">Infrastruktur</div>
       <h2 data-i18n="index.infraH2">Mereka yang Bikin Bisa</h2>
@@ -343,7 +373,7 @@
   </section>
 
   <!-- 3 Pilar -->
-  <section class="section section-accent">
+  <section class="section section-accent section-spacious">
     <div class="container">
       <div class="section-label section-label-light" data-i18n="index.sectionLabel7">Yang Terpenting</div>
       <h2 class="text-light" data-i18n="index.pillarH2">3 Pilih Saham Sebelum Beli</h2>
@@ -369,7 +399,7 @@
   </section>
 
   <!-- 2 Sumber Keuntungan -->
-  <section class="section">
+  <section class="section section-compact">
     <div class="container">
       <div class="section-label" data-i18n="index.sectionLabelReturns">Return</div>
       <h2 data-i18n="index.returnsH2">2 Sumber Keuntungan Saham</h2>
@@ -391,7 +421,7 @@
   </section>
 
   <!-- Cara Beli -->
-  <section class="section section-alt">
+  <section class="section section-alt section-spacious">
     <div class="container">
       <div class="section-label" data-i18n="index.sectionLabelPraktis">Praktis</div>
       <h2 data-i18n="index.caraBeliH2">Cara Beli Saham</h2>
@@ -438,7 +468,7 @@
   </section>
 
   <!-- Rekening Saham -->
-  <section class="section">
+  <section class="section section-compact">
     <div class="container">
       <div class="section-label" data-i18n="index.sectionLabelRekening">Rekening</div>
       <h2>3 Rekening dalam 1 Akun</h2>
@@ -473,7 +503,7 @@
   </section>
 
   <!-- Proses Transaksi -->
-  <section class="section section-alt">
+  <section class="section section-alt section-compact">
     <div class="container">
       <div class="section-label" data-i18n="index.sectionLabelMekanisme">Mekanisme</div>
       <h2>Bagaimana Transaksi Bekerja?</h2>
@@ -508,7 +538,7 @@
   </section>
 
   <!-- Keamanan -->
-  <section class="section">
+  <section class="section section-spacious">
     <div class="container">
       <div class="section-label" data-i18n="index.sectionLabelKeamanan">Keamanan</div>
       <h2>Aman Ga Sih?</h2>
@@ -534,7 +564,7 @@
   </section>
 
   <!-- Biaya -->
-  <section class="section section-alt">
+  <section class="section section-alt section-compact">
     <div class="container">
       <div class="section-label" data-i18n="index.sectionLabelBiaya">Biaya</div>
       <h2>Biaya yang Perlu Diketahui</h2>
@@ -559,7 +589,7 @@
   </section>
 
   <!-- CTA -->
-  <section class="section section-cta">
+  <section class="section section-cta section-spacious">
     <div class="container" style="text-align:center">
       <h2 style="border:none;" data-i18n="index.sectionLabel8">Siap Mulai?</h2>
       <p class="lead" style="max-width:600px; margin:0 auto 32px;">Kamu sudah mengerti seluk-beluk saham dan ekosistemnya. Sekarang waktunya langkah pertama — atau lanjut belajar analisa.</p>
