@@ -120,6 +120,35 @@ img { max-width: 100%; height: auto; }
   .top-bar-title { font-size: .82rem; }
 }
 
+/* ===== Language Switcher ===== */
+.lang-switch {
+  display: flex;
+  gap: 2px;
+  background: rgba(255,255,255,.1);
+  border-radius: var(--radius-pill);
+  padding: 2px;
+  flex-shrink: 0;
+}
+.lang-btn {
+  padding: 3px 10px;
+  border: none;
+  background: transparent;
+  color: rgba(255,255,255,.6);
+  font-size: .75rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition);
+  font-family: var(--font);
+}
+.lang-btn:hover {
+  color: rgba(255,255,255,.9);
+}
+.lang-btn.active {
+  background: rgba(255,255,255,.2);
+  color: #fff;
+}
+
 /* ===== Navigation ===== */
 .site-nav {
   background: var(--surface);

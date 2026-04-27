@@ -58,6 +58,66 @@
     }
   });
 
+  // ── i18n / Language Switcher ──
+  var currentLang = (function () {
+    try { return localStorage.getItem('lang') || 'id'; } catch (e) { return 'id'; }
+  })();
+
+  function applyLang(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang;
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+
+    // Text content
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      if (I18N_DICT[key] && I18N_DICT[key][lang] !== undefined) {
+        el.textContent = I18N_DICT[key][lang];
+      }
+    });
+
+    // HTML content (for elements with links/bold)
+    document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-html');
+      if (I18N_DICT[key] && I18N_DICT[key][lang] !== undefined) {
+        el.innerHTML = I18N_DICT[key][lang];
+      }
+    });
+
+    // Page title
+    var titleEl = document.querySelector('[data-i18n-title]');
+    if (titleEl) {
+      var tkey = titleEl.getAttribute('data-i18n-title');
+      if (I18N_DICT[tkey] && I18N_DICT[tkey][lang] !== undefined) {
+        document.title = I18N_DICT[tkey][lang];
+      }
+    }
+
+    // Meta description
+    var metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && I18N_DICT['meta.desc'] && I18N_DICT['meta.desc'][lang]) {
+      metaDesc.setAttribute('content', I18N_DICT['meta.desc'][lang]);
+    }
+
+    // Update lang switcher buttons
+    document.querySelectorAll('.lang-btn').forEach(function (btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+  }
+
+  // Bind language switcher
+  document.querySelectorAll('.lang-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var lang = btn.getAttribute('data-lang');
+      if (lang && lang !== currentLang) {
+        applyLang(lang);
+      }
+    });
+  });
+
+  // Apply saved language on load
+  applyLang(currentLang);
+
   // ── Animate cards on scroll (Intersection Observer) ──
   if ('IntersectionObserver' in window) {
     const animatedEls = document.querySelectorAll('.card, .step, .stat, .pilar-card, .split-card, .example-card, .flow-step, .trust-card');
